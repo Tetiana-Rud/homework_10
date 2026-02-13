@@ -1,0 +1,8 @@
+/* ---- Variables - Змінна -----*/
+
+:root {
+    --main-background: linear-gradient(#4e585c, #719090);
+    --main-font-size: 16px;
+    --main-font-color: #f2e8f2;
+    --width-container: 980px;
+}

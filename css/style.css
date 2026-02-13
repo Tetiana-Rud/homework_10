@@ -1,0 +1,51 @@
+@import url("./var.css");
+
+
+
+
+/* 
+    display: flex; 
+   justify-content: space-between;
+   align-items: center;
+   flex-direction: column;
+   gap: 10px;
+   flex-basis: 100xp
+   flex-wrap
+   flex-grow
+   order
+   
+   */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: var(--main-font-size);
+    background: var(--main-background);
+    color: var(--main-font-color);
+    min-height: 100vh;
+}
+ul {
+    padding-left: 0;
+    list-style: none;
+}
+.container {
+    max-width: var(--width-container);
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.header {
+    background: #4e4a4e;
+    padding: 25px 0;
+}
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu {
+    display: flex;
+    gap: 25px;
+}
