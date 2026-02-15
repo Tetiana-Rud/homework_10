@@ -25,10 +25,9 @@ ul {
 	margin: 0 auto;
 	padding: 0 15px;
 }
-
 .header__container {
-	margin-top: 25px;
-	margin-bottom: 87px;
+	padding: 17px 0;
+	margin-bottom: 70px;
 }
 .menu__logo {
 	max-width: 200px;
@@ -80,26 +79,30 @@ ul {
 	padding-top: 13px;
 	padding-bottom: 13px;
 	cursor: pointer;
-	background-color: transparent;
-	border: 1px solid #bcd0e5;
+	border: none;
 	border-radius: 4px;
+	background-color: #ff9900;
+	border: 1px solid #ff9900;
+	color: #ffffff;
 	transition: all 0.5s ease;
 }
 .menu__btn:hover {
-	border: none;
-	background-color: #ff9900;
-	color: #ffffff;
+	background-color: transparent;
+	border-color: #bcd0e5;
+	color: var(--main-font-color);
 }
 
-.page__flex-container {
+.page__flex-container,
+.benefits__flex-container,
+.product__flex-container,
+.marketers__flex-container {
 	display: flex;
 	justify-content: space-between;
 	gap: 58px;
 	align-items: center;
-}
-.page__hero {
 	margin-bottom: 100px;
 }
+
 .hero__block:first-of-type {
 	max-width: 500px;
 }
@@ -113,11 +116,15 @@ ul {
 	line-height: 1.55;
 	text-align: justify;
 }
+.hero__img {
+	width: 100%;
+}
 .page__features {
 	padding-bottom: 78px;
 	background-image: url(../assets/img/bg.png);
 	background-position: bottom;
 	background-repeat: no-repeat;
+	margin-bottom: 100px;
 }
 .hero__btn,
 .features__btn {
@@ -127,7 +134,7 @@ ul {
 	padding-top: 13px;
 	padding-bottom: 13px;
 	background-color: #ff9900;
-	border: none;
+	border: 1px solid #ff9900;
 	border-radius: 4px;
 	font-family: "Poppins", sans-serif;
 	font-weight: 700;
@@ -135,7 +142,13 @@ ul {
 	line-height: 1.5;
 	color: #ffffff;
 	cursor: pointer;
-	transition: opacity 0.5s ease;
+	transition: all 0.5s ease;
+}
+.hero__btn:hover,
+.features__btn:hover {
+	background-color: transparent;
+	border-color: #bcd0e5;
+	color: var(--main-font-color);
 }
 .features__title {
 	max-width: 540px;
@@ -167,7 +180,81 @@ ul {
 	display: block;
 	margin: 0 auto;
 }
-.hero__btn:hover,
-.features__btn:hover {
-	opacity: 0.8;
+.benefiits__block {
+	flex-basis: 525px;
+}
+.benefiits__block p,
+.product__block p,
+.marketers__block p {
+	font-weight: 500;
+	line-height: 1.62;
+}
+.benefiits__title,
+.product__title,
+.marketers__title {
+	font-weight: 700;
+	font-size: 36px;
+	line-height: 1.22;
+	color: #2f281e;
+	margin-top: 0;
+	margin-bottom: 20px;
+}
+.benefiits__title span,
+.product__title span,
+.marketers__title span {
+	font-weight: 500;
+	font-size: var(--main-font-size);
+	line-height: 1.62;
+}
+.benefiits__title + p,
+.product__title + p,
+.marketers__title + p {
+	margin-bottom: 40px;
+	margin-top: 0;
+}
+.benefits__subtitle,
+.marketers__subtitle {
+	font-weight: 700;
+	font-size: var(--main-font-size);
+	line-height: 1.62;
+	color: #2f281e;
+	margin-top: 0;
+	margin-bottom: 10px;
+}
+.benefits__subtitle + p,
+.marketers__subtitle + p {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+.benefits__subtitle + p:not(:last-child),
+.marketers__subtitle + p:not(:last-child) {
+	margin-bottom: 30px;
+}
+.product__block{
+	flex: 0 0 505px;
+}
+.product__list {
+	list-style-type: none;
+	padding-left: 0;
+}
+.product__list .product__item {
+	line-height: 1.62;
+	display: flex;
+	align-items: center;
+	gap: 30px;
+	font-weight: 500;
+	line-height: 1.62;
+}
+.product__list .product__item:not(:last-child){
+	margin-bottom: 30px;
+}
+.product__list .product__item::before {
+	width: 35px;
+	height: 35px;
+	content: "";
+	background: url("../assets/img/icon.svg") 0 0 no-repeat;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	flex-shrink: 0;
 }
