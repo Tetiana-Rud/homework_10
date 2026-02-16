@@ -286,7 +286,10 @@ a {
 	margin-bottom: 30px;
 }
 .about__link,
-.stuff__link{
+.stuff__link {
+	color: var(--main-font-color);
+	font-weight: 500;
+	line-height: 1.62;
 	transition: all 0.5s ease;
 }
 .form__title {
@@ -305,11 +308,11 @@ a {
 .form__input {
 	width: 100%;
 	padding: 15px 10px;
-	border: 1px solid #BCD0E5;
+	border: 1px solid #bcd0e5;
 	border-radius: 4px;
 	margin-bottom: 25px;
 }
-.form__input:focus{
+.form__input:focus {
 	border: 1px solid #ff9900;
 	outline: none;
 }
