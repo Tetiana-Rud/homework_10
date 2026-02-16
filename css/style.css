@@ -12,14 +12,16 @@ body {
 	color: var(--main-font-color);
 	min-height: 100vh;
 }
-
 ul {
 	padding-left: 0;
 	list-style: none;
 	margin-top: 0;
 	margin-bottom: 0;
 }
-
+a {
+	text-decoration: none;
+	cursor: pointer;
+}
 [class$="__container"] {
 	max-width: var(--width-container);
 	margin: 0 auto;
@@ -59,12 +61,13 @@ ul {
 	gap: 20px;
 }
 .menu__link {
-	text-decoration: none;
 	color: #2f281e;
 	line-height: 1.75;
 	transition: all 0.5s ease;
 }
-.menu__link:hover {
+.menu__link:hover,
+.about__link:hover,
+.stuff__link:hover {
 	color: #ff9900;
 }
 .menu__buttons {
@@ -235,7 +238,7 @@ ul {
 .marketers__subtitle + p:not(:last-child) {
 	margin-bottom: 30px;
 }
-.product__block{
+.product__block {
 	flex: 0 0 505px;
 }
 .product__list {
@@ -250,7 +253,7 @@ ul {
 	font-weight: 500;
 	line-height: 1.62;
 }
-.product__list .product__item:not(:last-child){
+.product__list .product__item:not(:last-child) {
 	margin-bottom: 30px;
 }
 .product__list .product__item::before {
@@ -263,18 +266,55 @@ ul {
 	justify-content: center;
 	flex-shrink: 0;
 }
-.footer__flex-container{
+.footer__flex-container {
 	display: flex;
 	justify-content: space-between;
+	font-weight: 500;
 }
 .about__title,
 .stuff__title,
-.form__title{
-font-family: 'Gotham';
-font-style: normal;
-font-weight: 700;
-font-size: 20px;
-line-height: 30px;
-color: #2F281E;
-
+.form__title {
+	font-family: "Gotham", sans-serif;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 30px;
+	color: #2f281e;
+	margin-top: 0;
+}
+.about__title,
+.stuff__title {
+	margin-bottom: 30px;
+}
+.about__link,
+.stuff__link{
+	transition: all 0.5s ease;
+}
+.form__title {
+	margin-bottom: 25px;
+}
+.footer__form {
+	flex: 0 1 340px;
+}
+.form__title {
+	max-width: 280px;
+}
+.about__item:not(:last-child),
+.stuff__item:not(:last-child) {
+	margin-bottom: 15px;
+}
+.form__input {
+	width: 100%;
+	padding: 15px 10px;
+	border: 1px solid #BCD0E5;
+	border-radius: 4px;
+	margin-bottom: 25px;
+}
+.form__input:focus{
+	border: 1px solid #ff9900;
+	outline: none;
+}
+.form__input::placeholder {
+	font-size: 16px;
+	line-height: 1.25;
+	color: #bcd0e5;
 }
