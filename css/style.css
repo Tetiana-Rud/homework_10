@@ -1,5 +1,5 @@
+@import url("./font.css");
 @import url("./vars.css");
-
 * {
 	box-sizing: border-box;
 }
@@ -29,14 +29,17 @@ ul {
 	padding: 17px 0;
 	margin-bottom: 70px;
 }
-.menu__logo {
+.menu__logo,
+.footer__logo {
 	max-width: 200px;
 	flex-basis: 200px;
 	flex-shrink: 0;
 	flex-grow: 0;
 }
-.menu__logo > img {
+.menu__logo > img,
+.footer__logo > img {
 	width: 100%;
+	object-fit: cover;
 }
 .menu {
 	display: flex;
@@ -127,7 +130,8 @@ ul {
 	margin-bottom: 100px;
 }
 .hero__btn,
-.features__btn {
+.features__btn,
+.form__btn {
 	width: 180px;
 	text-align: center;
 	font-size: 18px;
@@ -145,7 +149,8 @@ ul {
 	transition: all 0.5s ease;
 }
 .hero__btn:hover,
-.features__btn:hover {
+.features__btn:hover,
+.form__btn:hover {
 	background-color: transparent;
 	border-color: #bcd0e5;
 	color: var(--main-font-color);
@@ -257,4 +262,19 @@ ul {
 	align-items: center;
 	justify-content: center;
 	flex-shrink: 0;
+}
+.footer__flex-container{
+	display: flex;
+	justify-content: space-between;
+}
+.about__title,
+.stuff__title,
+.form__title{
+font-family: 'Gotham';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 30px;
+color: #2F281E;
+
 }
